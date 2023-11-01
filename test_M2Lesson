@@ -1,0 +1,37 @@
+import json
+import pytest
+from M2Lesson import Contact, ContactManager  # Replace with your actual module name
+
+def test_contact_creation():
+    c = Contact("John Doe", "johndoe@example.com", "1234567890", {"friend", "work"})
+    assert c.name == "John Doe"
+    # Add assertions for other fields
+
+def test_serialization():
+    c = Contact("Jane Doe", "janedoe@example.com", "0987654321", {"family"})
+    serialized = c.serialize()
+    assert json.loads(serialized) == {
+        "name": "Jane Doe",
+        "email": "janedoe@example.com",
+        "phone": "0987654321",
+        "tags": ["family"]
+    }
+    # Add test for deserialization
+
+def test_contact_manager_add_remove():
+    manager = ContactManager()
+    c = Contact("Alex Smith", "alexsmith@example.com", "1234567890", {"work"})
+    manager.add_contact(c)
+    # Add assertions to check if contact is added
+    # Add tests for removing a contact and verifying
+
+def test_contact_manager_retrieve():
+    # Add tests for retrieving contacts by email and by tags
+
+def test_save_load():
+    # Add tests for saving to a file and loading from a file
+
+def test_error_handling():
+    # Add tests for error scenarios
+
+# More tests as necessary
