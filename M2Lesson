@@ -1,0 +1,43 @@
+#Coding Project Assignment: Contact Manager
+
+#Overview
+#You are tasked with developing a contact manager application that uses dictionaries and sets to store and manage contacts. The application should also provide functionality to serialize the contact data for storage and retrieval.
+
+#Objectives
+#Contact Class: Create a class named Contact with the following attributes:
+
+#- name (string)
+#- email (string)
+#- phone (string)
+#- tags (set of strings) - to categorize the contact (e.g., "family", "work").
+
+
+#Serialization: Implement methods within the Contact class to serialize and deserialize a Contact object to and from a JSON string.
+
+#Contact Manager Class: Create a ContactManager class which manages a collection of contacts. Use a dictionary to store contacts, where the key is the contact's email and the value is the Contact object.
+
+#Functionality: The ContactManager should provide methods to:
+
+#- Add a new contact
+#- Remove a contact by email
+#- Retrieve a contact by email
+#- Retrieve contacts by a tag
+#- Save all contacts to a file in a serialized format (JSON)
+#- Load contacts from a file
+#- Error Handling: Ensure that your program handles cases such as adding a contact with an existing email or retrieving a contact/tag that does not exist.
+
+#Tag Management: Provide a method in the Contact class to add or remove tags from a contact.
+
+#Testing with Pytest
+#Your submission must pass the following tests:
+
+#- Test creation of a Contact object and ensure that its attributes are correctly assigned.
+#- Test serialization and deserialization of a Contact object.
+#- Test adding, removing, and retrieving contacts in the ContactManager.
+#- Test adding, removing, and retrieving tags from a contact.
+#- Test saving to a file and loading from a file.
+#- Test error handling and edge cases, such as adding a duplicate contact or retrieving a non-existent contact.
+
+#Submission
+#Submit your Python code with classes and methods fulfilling the above requirements. Ensure that your code is well-documented and follows Python best practices. Include your Pytest test suite in your submission.
+
